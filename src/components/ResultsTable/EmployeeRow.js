@@ -1,14 +1,14 @@
 import React from "react";
 import "./style.css";
 
-function EmployeeRow() {
+function EmployeeRow(props) {
     return (
         <tr>
-            <td>Table Data</td>
-            <td>Table Data</td>
-            <td>Table Data</td>
-            <td>Table Data</td>
-            <td>Table Data</td>
+            <td><img src={props.img} alt="employee thumbnail" /></td>
+            <td>{props.name}</td>
+            <td>{props.email}</td>
+            <td>{props.phone}</td>
+            <td>{props.dob}</td>
         </tr>
     )
 };
