@@ -1,0 +1,9 @@
+.header-container {
+    text-align: center;
+    padding: 100px;
+    background-color: rgb(9, 9, 78);
+}
+
+.title, .subtitle {
+    color: white;
+}
