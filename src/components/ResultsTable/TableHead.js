@@ -5,9 +5,9 @@ function TableHead(props) {
     let icon, nameIcon, phoneIcon, emailIcon, dobIcon;
 
     if (props.order.direction === "ascending") {
-        icon = "chevron-up"
-    } else {
         icon = "chevron-down"
+    } else {
+        icon = "chevron-up"
     };
 
     switch (props.order.category) {

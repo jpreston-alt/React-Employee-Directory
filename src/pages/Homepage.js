@@ -12,7 +12,7 @@ class Homepage extends React.Component {
             resultsAll: [],
             resultsFiltered: [],
             order: {
-                direction: "descending",
+                direction: "ascending",
                 category: "name"
             }
         };
@@ -27,17 +27,17 @@ class Homepage extends React.Component {
     getEmployees = () => {
         API.getEmployees()
             .then(res => {
-                this.setState({ resultsAll: this.sortDesc(res.data.results, "name", "first") });
+                this.setState({ resultsAll: this.sortAsc(res.data.results, "name", "first") });
                 this.setState({ resultsFiltered: this.state.resultsAll });
             })
             .catch(err => console.log(err));
     };
 
-    sortDesc(arr, prop1, prop2 = 0) {
+    sortAsc(arr, prop1, prop2 = 0) {
         return arr.sort((a, b) => (a[prop1][prop2] > b[prop1][prop2]) ? 1 : -1);
     };
 
-    sortAsc(arr, prop1, prop2 = 0) {
+    sortDesc(arr, prop1, prop2 = 0) {
         return arr.sort((a, b) => (a[prop1][prop2] > b[prop1][prop2]) ? -1 : 1);
     };
 
