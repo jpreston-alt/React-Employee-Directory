@@ -11,7 +11,10 @@ class Homepage extends React.Component {
         this.state = {
             resultsAll: [],
             resultsFiltered: [],
-            order: "ascending"
+            order: {
+                direction: "descending",
+                category: "name"
+            }
         };
 
         this.handleArrowClick = this.handleArrowClick.bind(this);
@@ -24,30 +27,30 @@ class Homepage extends React.Component {
     getEmployees = () => {
         API.getEmployees()
             .then(res => {
-                this.setState({ resultsAll: this.sortAsc(res.data.results, "email") });
+                this.setState({ resultsAll: this.sortDesc(res.data.results, "name", "first") });
                 this.setState({ resultsFiltered: this.state.resultsAll });
             })
             .catch(err => console.log(err));
     };
 
-    sortDesc(arr, property) {
-        return arr.sort((a, b) => (a[property] > b[property]) ? 1 : -1);
+    sortDesc(arr, prop1, prop2 = 0) {
+        return arr.sort((a, b) => (a[prop1][prop2] > b[prop1][prop2]) ? 1 : -1);
     };
 
-    sortAsc(arr, property) {
-        return arr.sort((a, b) => (a[property] > b[property]) ? -1 : 1);
+    sortAsc(arr, prop1, prop2 = 0) {
+        return arr.sort((a, b) => (a[prop1][prop2] > b[prop1][prop2]) ? -1 : 1);
     };
 
-    handleArrowClick() {
-        if (this.state.order === "ascending") {
+    handleArrowClick(cat, subcat = 0) {
+        if (this.state.order.direction === "ascending") {
             this.setState({
-                resultsFiltered: this.sortDesc(this.state.resultsFiltered, "email"),
-                order: "descending"
+                resultsFiltered: this.sortDesc(this.state.resultsFiltered, cat, subcat),
+                order: { direction: "descending", category: cat }
             });
         } else {
             this.setState({
-                resultsFiltered: this.sortAsc(this.state.resultsFiltered, "email"),
-                order: "ascending"
+                resultsFiltered: this.sortAsc(this.state.resultsFiltered, cat, subcat),
+                order: { direction: "ascending", category: cat }
             });
         }
     };
@@ -72,6 +75,7 @@ class Homepage extends React.Component {
                     <ResultsTable
                         employees={this.state.resultsFiltered}
                         handleArrowClick={this.handleArrowClick}
+                        order={this.state.order}
                     />
                 </div>
             </div>
