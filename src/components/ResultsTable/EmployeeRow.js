@@ -6,8 +6,8 @@ function EmployeeRow(props) {
         <tr>
             <td><img src={props.img} alt="employee thumbnail" /></td>
             <td>{props.name}</td>
-            <td>{props.email}</td>
             <td>{props.phone}</td>
+            <td>{props.email}</td>
             <td>{props.dob}</td>
         </tr>
     )

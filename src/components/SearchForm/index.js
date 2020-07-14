@@ -5,8 +5,12 @@ function SearchForm(props) {
     return (
         <div className="uk-container form-container">
             <form>
-                <div class="uk-margin">
-                    <input class="input-box uk-input uk-form-width-medium" type="text" placeholder="Search" />
+                <div className="uk-margin">
+                    <input
+                        onChange={props.handleInputChange}
+                        className="input-box uk-input uk-form-width-medium" type="text"
+                        placeholder="Search"
+                    />
                 </div>
             </form>
         </div>

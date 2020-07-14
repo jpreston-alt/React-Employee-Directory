@@ -1,7 +1,6 @@
 import React from "react";
 import "./style.css";
 import EmployeeRow from "./EmployeeRow";
-import { tsPropertySignature } from "@babel/types";
 
 function ResultsTable(props) {
     return (
@@ -10,10 +9,22 @@ function ResultsTable(props) {
                 <thead className="table-head">
                     <tr>
                         <th>Image</th>
-                        <th>Name</th>
-                        <th>Phone</th>
-                        <th>Email</th>
-                        <th>DOB</th>
+                        <th onClick={props.handleArrowClick}>
+                            Name
+                            <span className="icon" uk-icon="chevron-down" />
+                        </th>
+                        <th>
+                            Phone
+                            <span className="icon" uk-icon="chevron-down" />
+                        </th>
+                        <th>
+                            Email
+                            <span className="icon" uk-icon="chevron-down" />
+                        </th>
+                        <th>
+                            DOB
+                            <span className="icon" uk-icon="chevron-down" />
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
