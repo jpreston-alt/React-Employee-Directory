@@ -11,6 +11,7 @@ This application was built with React, and it taught me alot about breaking up a
 * JavaScript
 * React
 * UIKit
+* Create React App
 
 ## Usage
 * Navigate to the [deployed appliation](https://jpreston-alt.github.io/React-Employee-Directory/).
