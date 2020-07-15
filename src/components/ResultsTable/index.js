@@ -21,12 +21,10 @@ class ResultsTable extends React.Component {
         return phoneNum;
     };
 
-    // console.log(window.innerWidth);
-
     render() {
         return (
             <div className="uk-container table-container">
-                <table className="uk-table uk-table-striped uk-table-responsive table">
+                <table className="uk-table uk-table-striped table">
                     <TableHead
                         handleArrowClick={this.props.handleArrowClick}
                         order={this.props.order}

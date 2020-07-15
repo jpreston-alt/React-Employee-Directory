@@ -30,21 +30,21 @@ function TableHead(props) {
     return (
         <thead className="table-head">
             <tr>
-                <th>Image</th>
+                <th></th>
                 <th onClick={() => props.handleArrowClick("name", "first")}>
-                    Name
+                    <a>Name</a>
                     <span className="icon" uk-icon={nameIcon} />
                 </th>
                 <th onClick={() => props.handleArrowClick("phone")}>
-                    Phone
+                    <a>Phone</a>
                     <span className="icon" uk-icon={phoneIcon} />
                 </th>
                 <th onClick={() => props.handleArrowClick("email")}>
-                    Email
+                    <a>Email</a>
                     <span className="icon" uk-icon={emailIcon} />
                 </th>
                 <th onClick={() => props.handleArrowClick("dob", "date")}>
-                    DOB
+                    <a>DOB</a>
                     <span className="icon" uk-icon={dobIcon} />
                 </th>
             </tr>
