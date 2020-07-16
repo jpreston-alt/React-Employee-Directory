@@ -60,7 +60,7 @@ class Homepage extends React.Component {
 
         let filtered = this.state.resultsAll.filter(employee => {
             let name = `${employee.name.first} ${employee.name.last}`;
-            return name.toLowerCase().includes(event.target.value);
+            return name.toLowerCase().startsWith(event.target.value);
         });
 
         this.setState({ resultsFiltered: filtered });
