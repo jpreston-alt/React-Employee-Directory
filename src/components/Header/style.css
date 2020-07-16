@@ -8,7 +8,7 @@
     color: white;
 }
 
-button {
+.about-btn {
     background: none;
     border: .5px solid white;
     color: white;
@@ -21,9 +21,10 @@ button {
     letter-spacing: 2px;
 }
 
-button:hover {
+.about-btn:hover, .about-btn:focus {
     background: white;
     color: #228ff1;
+    outline: none;
 }
 
 .about-section {

@@ -6,7 +6,7 @@ function Header() {
     return (
         <div className="uk-container header-container">
             <h1 className="subtitle">Employee Directory</h1>
-            <button type="button" uk-toggle="target: #offcanvas-slide">About</button>
+            <button type="button" className="about-btn" uk-toggle="target: #offcanvas-slide">About</button>
             <OffCanvas />
         </div>
     )
