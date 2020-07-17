@@ -1,7 +1,10 @@
 .header-container {
     text-align: center;
-    padding: 100px;
+    padding: 100px 0px 100px 0px;
     background-color: #228ff1;
+    width: 100% !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
 }
 
 .title, .subtitle {

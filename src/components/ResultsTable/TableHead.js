@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import "./style.css";
 
@@ -5,9 +6,9 @@ function TableHead(props) {
     let icon, nameIcon, phoneIcon, emailIcon, dobIcon;
 
     if (props.order.direction === "ascending") {
-        icon = "chevron-down"
-    } else {
         icon = "chevron-up"
+    } else {
+        icon = "chevron-down"
     };
 
     switch (props.order.category) {
@@ -17,7 +18,7 @@ function TableHead(props) {
         case "email":
             emailIcon = icon
             break;
-        case "phone":
+        case "stripPhone":
             phoneIcon = icon
             break;
         case "dob":
@@ -35,7 +36,7 @@ function TableHead(props) {
                     <a>Name</a>
                     <span className="icon" uk-icon={nameIcon} />
                 </th>
-                <th onClick={() => props.handleArrowClick("phone")}>
+                <th onClick={() => props.handleArrowClick("stripPhone")}>
                     <a>Phone</a>
                     <span className="icon" uk-icon={phoneIcon} />
                 </th>

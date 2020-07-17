@@ -1,9 +1,9 @@
 # [Employee-Directory](https://jpreston-alt.github.io/React-Employee-Directory/)
 
 ## Description
-Employee Directory was built for the user that wants to be able to view their entire employee directory at once, and have quick access to employee information.
+This application allows the user to view their employee directory, and have easy access to employee information. In order to allow the user quick access to employee information, they are able to sort employees in ascending or descending order in each of the following categories: name, phone number, email, and date of birth. They may also filter and find specific employess by searching for an employee's name in the search box.
 
-This application was built with React, and it taught me alot about breaking up an application's UI into components, managing component state, and responding to user events. It pulls 200 employees from the Random User API and allows the user to filter employees by name, or sort them by category.
+Employee Directory was built with React and utilizes Create React App as a boilerplate. It uses axios to pull 200 randomly generated employees from [the Random User API](https://randomuser.me/). Building this application from scratch taught me a lot about working with React and how to break up an application's UI into components, manage component state, and respond to user events.
 
 ## Technologies
 * HTML
@@ -12,6 +12,7 @@ This application was built with React, and it taught me alot about breaking up a
 * React
 * UIKit
 * Create React App
+* Axios
 
 ## Usage
 * Navigate to the [deployed appliation](https://jpreston-alt.github.io/React-Employee-Directory/).

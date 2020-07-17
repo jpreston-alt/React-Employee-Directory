@@ -4,17 +4,16 @@ import "./style.css";
 function OffCanvas() {
     return (
         <div id="offcanvas-slide" uk-offcanvas="mode: slide; overlay: true">
-            <div class="uk-offcanvas-bar">
+            <div className="uk-offcanvas-bar">
 
-                <button class="uk-offcanvas-close" type="button" uk-close="true"></button>
-
+                <button className="uk-offcanvas-close" type="button" uk-close="true"></button>
                 <h3>About</h3>
-
-                <p className="about-section">This application was built with React and was a practice in breaking up an application's UI into components, managing component state, and responding to user events. It pulls 200 employees from the Random User API and allows the user to filter employees by name, or sort them by category.
-                <br /><br />
-                    In order to filter employees by name simply type in a name into the search bar. In order to sort the employee list by name, email, phone number, or DOB, click on that category. Click on the category again to switch the sorting order.
+                <p className="about-section">
+                    This application allows the user to view their employee directory, and have easy access to employee information. It was built with React and pulls 200 randomly generated employees from the Random User API. In order to filter employees by name, type a name into the search bar. In order to sort the employee list by name, email, phone number, or DOB, click on that category. Click on the category again to switch the sorting order.
                 </p>
-
+                <p className="about-section">
+                    <a href="https://github.com/jpreston-alt/React-Employee-Directory">View GitHub respository here</a>.
+                </p>
             </div>
         </div>
 
